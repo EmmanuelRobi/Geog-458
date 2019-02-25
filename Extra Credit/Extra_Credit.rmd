@@ -24,7 +24,7 @@ Columns$GEOID10 =Columns$w_geocode
 WACBLOCK <- merge(tacomablockshp, Columns, by=c("GEOID10"))
 ```
 
-#Static choropleth maps 
+#Tacoma Static Choropleth Maps
 ```{r Static Maps, include = TRUE}
 #Static choropleth maps 
 tm_shape(WACBLOCK) +tm_fill(col="CNS05", title = "Number of Jobs") + tm_borders() + tm_layout(title = "All manufacturing jobs in Tacoma ", title.position = c("RIGHT", "TOP")) 
@@ -34,7 +34,7 @@ tm_shape(WACBLOCK) +tm_fill(col="CNS06", title = "Number of Jobs") + tm_borders(
 tm_shape(WACBLOCK) +tm_fill(col="CNS16", title = "Number of Jobs") + tm_borders() +tm_layout(title = "All Health Care and Social Assistance jobs in Tacoma", title.position = c("RIGHT", "TOP")) 
 ```
 
-#Interative cholopleth maps 
+#Tacoma Interactive Cholopleth maps 
 ```{r Interactive Maps, include = TRUE}
 #Interative cholopleth maps 
 tmap_mode("view") + tm_shape(WACBLOCK) + tm_fill("CD01", title = "Number of Jobs") + tm_borders() + tm_layout(title = "All jobs for workers with Educational Attainment: Bachelor’s Degree or advanced degree", title.position = c("RIGHT", "TOP")) 
