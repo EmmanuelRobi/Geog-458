@@ -37,8 +37,8 @@ tm_shape(WACBLOCK) +tm_fill(col="CNS16", title = "Number of Jobs") + tm_borders(
 #Tacoma Interactive Cholopleth maps 
 ```{r Interactive Maps, include = TRUE}
 #Interative cholopleth maps 
-tmap_mode("view") + tm_shape(WACBLOCK) + tm_fill("CD01", title = "Number of Jobs") + tm_borders() + tm_layout(title = "All jobs for workers with Educational Attainment: Bachelor’s Degree or advanced degree", title.position = c("RIGHT", "TOP")) 
+tmap_mode("view") + tm_shape(WACBLOCK) + tm_fill("CD01", title = "Number of Jobs") + tm_borders() + tm_layout(title = "All jobs for workers with Educational Attainment: Bachelor’s Degree or advanced degree", title.position = c("RIGHT", "TOP")) + tm_view(view.legend.position = c("left", "bottom"))  
 
-tmap_mode("view") + tm_shape(WACBLOCK) + tm_fill("CD04", title = "Number of Jobs") +tm_borders() + tm_layout(title = "All jobs for workers with Educational Attainment: Less than high school in Tacoma", title.position = c("RIGHT", "TOP")) 
+tmap_mode("view") + tm_shape(WACBLOCK) + tm_fill("CD04", title = "Number of Jobs") +tm_borders() + tm_layout(title = "All jobs for workers with Educational Attainment: Less than high school in Tacoma", title.position = c("RIGHT", "TOP")) + tm_view(view.legend.position = c("left", "bottom")) 
 ```
 
